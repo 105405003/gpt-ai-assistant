@@ -34,7 +34,7 @@ app.post(config.APP_WEBHOOK_PATH, validateLineSignature, async (req, res) => {
     res.sendStatus(200);
   } catch (err) {
     console.error(err.message);
-    res.sendStatus(2000);
+    res.sendStatus(500);
   }
   if (config.APP_DEBUG) printPrompts();
 });
